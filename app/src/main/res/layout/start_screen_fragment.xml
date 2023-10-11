@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/yol"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:src="@drawable/yazitrans"
+
+
+            ></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="-17dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+
+            >
+
+            <ImageView
+
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_baseline_person_24"
+                ></ImageView>
+
+            <EditText
+                android:id="@+id/player_name_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:gravity="center"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:hint="PLAYER NAME"
+                android:maxLength="15"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"></EditText>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logotransparent"
+            ></ImageView>
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:backgroundTint="@android:color/transparent"
+        app:cornerRadius="20dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"
+        android:backgroundTint="#30000000"
+        android:id="@+id/mainstartbutton"
+        android:text="START"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
+        app:layout_constraintBottom_toTopOf="@+id/banner"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-2267634847444711/1946844550"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

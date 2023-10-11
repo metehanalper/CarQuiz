@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/yol"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/gameovertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GAME OVER"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        ></TextView>
+    <ImageView
+        android:id="@+id/crash"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_height="200dp"
+        android:background="@drawable/accident"
+        app:layout_constraintTop_toBottomOf="@id/gameovertext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></ImageView>
+
+    <Button
+        android:id="@+id/playagainbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="PLAY AGAIN"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        app:backgroundTint="@android:color/transparent"
+        app:cornerRadius="20dp"
+        android:backgroundTint="#50000000"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/highsScoreGameOverButton"
+        app:layout_constraintEnd_toEndOf="@+id/highsScoreGameOverButton"
+        app:layout_constraintStart_toStartOf="@+id/highsScoreGameOverButton"
+        ></Button>
+
+    <LinearLayout
+        android:background="#80000000"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/playagainbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/crash">
+
+        <ImageView
+            android:id="@+id/gameoverscoreicon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+
+            android:background="@drawable/ic_baseline_monetization_on_24"
+
+
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/finalscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000"
+
+            android:textColor="@color/white"
+            android:textSize="50dp"></TextView>
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/highsScoreGameOverButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        android:text="HIGH SCORE TABLE"
+        android:textSize="25dp"
+        app:backgroundTint="@android:color/transparent"
+
+        android:backgroundTint="#50000000"
+
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

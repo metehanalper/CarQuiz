@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#CCC"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/namelinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/deneme"
+        >
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Metehan A. Elmas"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="17dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Halil Akpınar"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/linkedinlinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/namelinear"
+        >
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/metelinkedin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/linkedin"
+            ></ImageView>
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/halillinledin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/linkedin"
+            ></ImageView>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

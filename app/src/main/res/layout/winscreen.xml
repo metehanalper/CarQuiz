@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/yol"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/youwintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOU WIN"
+
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        ></TextView>
+
+    <ImageView
+        android:id="@+id/winner"
+        android:layout_width="246dp"
+        android:layout_height="220dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/win"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youwintext"></ImageView>
+
+
+    <LinearLayout
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/restartbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/winner"
+        android:background="#80000000">
+
+        <ImageView
+            android:id="@+id/winscoreicon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/ic_baseline_monetization_on_24"></ImageView>
+
+        <TextView
+            android:id="@+id/finalscorewin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="000"
+            android:textColor="@color/white"
+            android:textSize="50dp"></TextView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/restartbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#50000000"
+        android:text="PLAY AGAIN"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:backgroundTint="@android:color/transparent"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@id/highscorebutton"
+
+        app:layout_constraintEnd_toEndOf="@+id/highscorebutton"
+
+        app:layout_constraintStart_toStartOf="@+id/highscorebutton"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"></Button>
+
+    <Button
+        android:id="@+id/highscorebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#50000000"
+        android:textStyle="bold"
+        android:text="HIGH SCORE TABLE"
+        android:textSize="25dp"
+        app:backgroundTint="@android:color/transparent"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
